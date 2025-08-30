@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import logo from '../media/logo.png';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    closeMenu();
+    setIsOpen(false);
   };
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <h2>Kaan Dienstleistungen</h2>
+          <img src={logo} alt="Kaan Reinigungsservice Logo" />
         </div>
-        
-        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
-          <a href="#services" onClick={() => scrollToSection('services')}>Leistungen</a>
-          <a href="#references" onClick={() => scrollToSection('references')}>Referenzen</a>
-          <a href="#contact" onClick={() => scrollToSection('contact')}>Kontakt</a>
-        </div>
-
+        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+          <li><a onClick={() => scrollToSection('about')}>Über uns</a></li>
+          <li><a onClick={() => scrollToSection('quality')}>Qualität</a></li>
+          <li><a onClick={() => scrollToSection('services')}>Leistungen</a></li>
+          <li><a onClick={() => scrollToSection('references')}>Referenzen</a></li>
+          <li><a onClick={() => scrollToSection('contact')}>Kontakt</a></li>
+        </ul>
         <div className="nav-toggle" onClick={toggleMenu}>
           <span></span>
           <span></span>

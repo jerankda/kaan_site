@@ -1,29 +1,46 @@
 import React from 'react';
 import './About.css';
+import teamPhoto from '../media/KNS.png';
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="container">
-        <h2>Wer sind wir</h2>
         <div className="about-content">
           <div className="about-text">
+            <h2>Wer sind wir</h2>
             <p>
-              Kaan ist Ihr kompetenter Partner für alle Arten von 
-              Reinigungs- und Pflegearbeiten. Mit jahrelanger Erfahrung und höchsten 
-              Qualitätsstandards bieten wir maßgeschneiderte Lösungen für Privat- und 
-              Gewerbekunden.
+              Kaan Reinigungsservice ist Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen. 
+              Mit jahrelanger Erfahrung und einem engagierten Team bieten wir maßgeschneiderte Lösungen für 
+              Privathaushalte und Unternehmen.
             </p>
             <p>
-              Unser Team aus geschulten Fachkräften arbeitet mit modernster Technik 
-              und umweltfreundlichen Reinigungsmitteln, um Ihnen ein optimales 
-              Ergebnis zu garantieren.
+              Unsere Mission ist es, Ihre Räumlichkeiten in einem makellosen Zustand zu halten, 
+              damit Sie sich auf das Wesentliche konzentrieren können. Wir setzen auf moderne 
+              Reinigungstechniken und umweltfreundliche Produkte.
             </p>
+            <div className="about-features">
+              <div className="feature">
+                <span className="feature-icon">👥</span>
+                <h4>Erfahrenes Team</h4>
+                <p>Qualifizierte Fachkräfte mit langjähriger Erfahrung</p>
+              </div>
+              <div className="feature">
+                <span className="feature-icon">🌱</span>
+                <h4>Umweltfreundlich</h4>
+                <p>Verwendung von ökologischen Reinigungsmitteln</p>
+              </div>
+              <div className="feature">
+                <span className="feature-icon">⚡</span>
+                <h4>Zuverlässig</h4>
+                <p>Pünktlich und termingerecht bei jedem Einsatz</p>
+              </div>
+            </div>
           </div>
           <div className="about-image">
-            <div className="placeholder-image">
-              <span className="placeholder-icon">👥</span>
-              <p>Team Foto</p>
+            <img src={teamPhoto} alt="Kaan Reinigungsservice Team" />
+            <div className="image-overlay">
+              <span>Unser Team</span>
             </div>
           </div>
         </div>

@@ -1,22 +1,26 @@
 import React from 'react';
 import './Banner.css';
+import logo from '../media/logo.png';
 
 const Banner = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="banner">
-      <div className="banner-content">
-        <h1>Professionelle Reinigungsdienstleistungen</h1>
-        <p>Ihr zuverlässiger Partner für Glasreinigung, Gartenarbeit und mehr</p>
-        <button className="cta-button" onClick={scrollToContact}>
-          Unverbindliches Angebot sichern
-        </button>
+    <section id="home" className="banner-section">
+      <div className="container">
+        <div className="banner-content">
+          <div className="banner-logo">
+            <img src={logo} alt="Kaan Reinigungsservice Logo" />
+          </div>
+          <h1>Kaan Reinigungsservice</h1>
+          <p>Professionelle Reinigungsdienstleistungen für Ihr Zuhause und Unternehmen</p>
+          <div className="banner-buttons">
+            <button className="cta-button primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+              Unverbindliches Angebot
+            </button>
+            <button className="cta-button secondary" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>
+              Unsere Leistungen
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
