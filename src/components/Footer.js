@@ -7,14 +7,14 @@ const Footer = ({ onImpressumClick }) => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h4>Kaan Reinigungsservice</h4>
+            <h4>KNS Gebäudereingung</h4>
             <p>Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen</p>
           </div>
           
           <div className="footer-section">
             <h4>Kontakt</h4>
             <p>+49 (0) 123 456789</p>
-            <p>info@kaan-reinigung.de</p>
+            <p>info@kns-gebäudereingung.de</p>
           </div>
           
           <div className="footer-section">
@@ -25,7 +25,7 @@ const Footer = ({ onImpressumClick }) => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Kaan Reinigungsservice. Alle Rechte vorbehalten.</p>
+          <p>&copy; 2025 KNS Gebäudereingung. Alle Rechte vorbehalten.</p>
           <div className="footer-links">
             <button onClick={onImpressumClick} className="footer-link">
               Impressum

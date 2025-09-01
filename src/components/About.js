@@ -10,7 +10,7 @@ const About = () => {
           <div className="about-text">
             <h2>Wer sind wir</h2>
             <p>
-              Kaan Reinigungsservice ist Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen. 
+              KNS Gebäudereingung ist Ihr zuverlässiger Partner für professionelle Reinigungsdienstleistungen. 
               Mit jahrelanger Erfahrung und einem engagierten Team bieten wir maßgeschneiderte Lösungen für 
               Privathaushalte und Unternehmen.
             </p>
@@ -38,7 +38,7 @@ const About = () => {
             </div>
           </div>
           <div className="about-image">
-            <img src={teamPhoto} alt="Kaan Reinigungsservice Team" />
+            <img src={teamPhoto} alt="KNS Gebäudereingung" />
             <div className="image-overlay">
               <span>Unser Team</span>
             </div>

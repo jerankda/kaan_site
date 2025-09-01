@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div className="contact-item">
               <span className="contact-icon">✉️</span>
-              <p>info@kaan-reinigung.de</p>
+              <p>info@kns-gebäudereingung.de</p>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>

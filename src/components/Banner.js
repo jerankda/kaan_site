@@ -8,9 +8,9 @@ const Banner = () => {
       <div className="container">
         <div className="banner-content">
           <div className="banner-logo">
-            <img src={logo} alt="Kaan Reinigungsservice Logo" />
+            <img src={logo} alt="KNS Gebäudereingung Logo" />
           </div>
-          <h1>Kaan Reinigungsservice</h1>
+          <h1>KNS Gebäudereingung</h1>
           <p>Professionelle Reinigungsdienstleistungen für Ihr Zuhause und Unternehmen</p>
           <div className="banner-buttons">
             <button className="cta-button primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
