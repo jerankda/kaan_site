@@ -37,6 +37,9 @@ const Footer = ({ onImpressumClick }) => {
               Datenschutz
             </a>
           </div>
+          <div className="footer-made">
+            Made with <span style={{color: 'red'}}>❤️</span> by <a href="https://jerankda.dev" target="_blank" rel="noopener noreferrer" style={{color: '#ffa500', textDecoration: 'none', fontWeight: 'bold'}}>jerankda</a>
+          </div>
         </div>
       </div>
     </footer>
