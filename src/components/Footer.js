@@ -13,8 +13,11 @@ const Footer = ({ onImpressumClick }) => {
           
           <div className="footer-section">
             <h4>Kontakt</h4>
-            <p>+49 (0) 123 456789</p>
-            <p>info@kns-gebäudereingung.de</p>
+              <strong>Kaan Sezen</strong><br />
+              31188 Holle<br />
+              Silberkamp 23<br />
+              Tel.: +49 17659787256<br />
+              Mail: kns.gebaeudereinigung@gmail.com
           </div>
           
           <div className="footer-section">

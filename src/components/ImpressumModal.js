@@ -16,31 +16,29 @@ const ImpressumModal = ({ isOpen, onClose }) => {
         <div className="impressum-content">
           <h3>Angaben gemäß § 5 TMG</h3>
           <p>
-            <strong>Kaan Reinigungsservice</strong><br />
-            Musterstraße 123<br />
-            12345 Musterstadt
+            <strong>Kaan Sezen</strong><br />
+            Einzelunternehmer<br />
+            Silberkamp 23<br />
+            31188 Holle
           </p>
-          
-          <h3>Vertreten durch</h3>
-          <p>Max Mustermann</p>
           
           <h3>Kontakt</h3>
           <p>
-            Telefon: +49 (0) 123 456789<br />
-            E-Mail: info@kaan-reinigung.de
+            Tel.: +49 17659787256<br />
+            Mail: kns.gebaeudereinigung@gmail.com
           </p>
           
+          {/* Falls keine Umsatzsteuer-ID vorhanden, kann dieser Abschnitt entfernt oder mit "Nicht vorhanden" ersetzt werden */}
           <h3>Umsatzsteuer-ID</h3>
           <p>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-            DE123456789
+            Nicht vorhanden
           </p>
           
           <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
           <p>
-            Max Mustermann<br />
-            Musterstraße 123<br />
-            12345 Musterstadt
+            Kaan Sezen<br />
+            Silberkamp 23<br />
+            31188 Holle
           </p>
         </div>
       </div>

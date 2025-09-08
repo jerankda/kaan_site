@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
@@ -23,22 +24,37 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitMessage('Vielen Dank! Wir werden uns in Kürze bei Ihnen melden.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-      
-      // Clear message after 5 seconds
-      setTimeout(() => setSubmitMessage(''), 5000);
-    }, 2000);
+
+    emailjs.send(
+      'service_8f1uao2',
+      'template_c28n8ip',
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message
+      },
+      'iVRZ2MU9HAcvVNuf5'
+    ).then(
+      (result) => {
+        setSubmitMessage('Vielen Dank! Ihre Nachricht wurde erfolgreich versendet.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+        setIsSubmitting(false);
+        setTimeout(() => setSubmitMessage(''), 5000);
+      },
+      (error) => {
+        setSubmitMessage('Fehler beim Senden. Bitte versuchen Sie es später erneut.');
+        setIsSubmitting(false);
+        setTimeout(() => setSubmitMessage(''), 5000);
+      }
+    );
   };
 
   return (
@@ -50,19 +66,15 @@ const Contact = () => {
             <h3>Kontaktdaten</h3>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
-              <p>+49 (0) 123 456789</p>
+              Tel.: +49 17659787256
             </div>
             <div className="contact-item">
               <span className="contact-icon">✉️</span>
-              <p>info@kns-gebäudereingung.de</p>
+              Mail: kns.gebaeudereinigung@gmail.com
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <p>Musterstraße 123, 12345 Musterstadt</p>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">🕒</span>
-              <p>Mo-Fr: 8:00 - 18:00 Uhr</p>
+              31188 Holle, Silberkamp 23
             </div>
           </div>
           
@@ -132,20 +144,14 @@ const Contact = () => {
                 placeholder="Beschreiben Sie Ihren Auftrag genauer..."
               />
             </div>
-            
-            {submitMessage && (
-              <div className="submit-message success">
-                {submitMessage}
-              </div>
-            )}
-            
-            <button 
-              type="submit" 
-              className="submit-button"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Wird gesendet...' : 'Angebot anfordern'}
-            </button>
+                  <button type="submit" className="submit-button" disabled={isSubmitting}>
+                    {isSubmitting ? 'Wird gesendet...' : 'Senden'}
+                  </button>
+                  {submitMessage && (
+                    <div className="submit-message">
+                      {submitMessage}
+                    </div>
+                  )}
           </form>
         </div>
       </div>
